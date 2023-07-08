@@ -1,21 +1,24 @@
-import '@styles/global.css'
+import '@styles/global.css';
+import NavBar from '@components/NavBar.jsx';
+import Provider from '@components/Provider'
 
 export const metadata = {
-    title : "AnimeQoutes",
+    title : "QoutesShare",
     description : "Discover & Share Anime Qoutes"
 }
 
 
-const RootLayout = ({Children}) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang='en'>
         <body>
             <div className="main">
                 <div className='gradient' />
             </div>
-
+            
             <main className='app'>
-                {Children}
+            <NavBar/>
+                { children }
             </main>
         </body>
     </html>
