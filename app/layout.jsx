@@ -2,6 +2,7 @@ import "@styles/global.css";
 import NavBar from "@components/NavBar.jsx";
 import Provider from "@components/Provider";
 
+
 export const metadata = {
   title: "QoutesShare",
   description: "Discover & Share Anime Qoutes",
