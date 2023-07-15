@@ -14,14 +14,14 @@ export const connectDb = async  () => {
     try {
         await mongoose.connect(process.env.MONGODB_URL, {
             dbName: "share_qoutes",
-            useNewUrlPareser: true,
+            useNewUrlParser: true,
             useUnifiedTopology: true,
-        })
+          });
 
         isConneected = true;
         console.log("mongoose connected")
     } catch (error) {
-        
+        console.log("error connecting database");
     }
 
 
