@@ -27,11 +27,26 @@ const Form = ({
     </span>
 
     <textarea
-      value={post.prompt}
-      onChange={(e) => setPost({ ...post, prompt: e.target.value })}
+      value={post.qoute}
+      onChange={(e) => setPost({ ...post, qoute: e.target.value })}
       placeholder='Write your qoute here'
       required
       className='form_textarea '
+    />
+  </label>
+  <label>
+    <span className='font-satoshi font-semibold text-base text-gray-700'>
+     Add a Image{" "}
+      <span className='font-normal'>
+        (#onepiece, #vinlandsaga, #vagabond, etc.)
+      </span>
+    </span>
+    <input
+      value={post.image}
+      onChange={(e) => setPost({ ...post, image: e.target.value })}
+      type='text'
+      placeholder='image'
+      className='form_input'
     />
   </label>
 
