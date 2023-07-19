@@ -1,13 +1,13 @@
 import { Schema, model, models } from 'mongoose';
+import User from './user';
 
 const QouteSchema = new Schema({
   Creator : {
       type:  Schema.Types.ObjectId,
-      ref: 'User'
+      ref: 'User',
 },
   qoute: {
     type: String,
-    unique: [true, 'qoute already exists!'],
     required: [true, 'qoute is required!'],
   },
   image:{
