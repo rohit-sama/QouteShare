@@ -8,6 +8,7 @@ import Profile from "@components/Profile.jsx";
 const MyProfile = () => {
     const {data :session} = useSession();
     const[posts, setPosts] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -18,8 +19,10 @@ const MyProfile = () => {
         
        if(session?.user.id){fetchPost();} 
       }, []);
-  const handleEdit = () => {};
-  const handleDelete = async () => {};
+  const handleEdit = (post) => {
+router.push(`/update-qoute?id=${post._id}`)
+  };
+  const handleDelete = async (post) => {};
 
   return (
     <div>
