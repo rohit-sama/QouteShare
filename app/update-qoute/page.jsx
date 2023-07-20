@@ -1,13 +1,14 @@
 "use client"
 import { useEffect, useState } from 'react';
-import { useSession } from 'next-auth/react';
 import { useRouter,useSearchParams } from 'next/navigation';
 import Form from '@components/Form';
 
 
 const EditQoute = () => {
 const router = useRouter();
-const {data : session} = useSession();
+const searchParams = useSearchParams();
+const qouteId = searchParams.get('id');
+
 
 
 const [submitting, setSubmitting] = useState(false);
@@ -18,20 +19,34 @@ const [post, setPost] = useState({
 })
 
 useEffect (() =>{
+   const  getqouteDetails = async () => {
+        const response = await fetch(`api/qoute/${qouteId}`)
+        const data = await response.json();
+
+        setPost({
+            qoute:data.qoute,
+            image:data.image,
+            tag:data.tag,
+
+        })
+    }
+    if(qouteId) getqouteDetails();
 
 },[qouteId])
 
-const createQoute = async (e) => {
+const UpdateQoute = async (e) => {
     e.preventDefault();
     setSubmitting(true);
 
+    if(!qouteId) return alert("qoute id not found")
+
+
     try {
-      const response = await fetch('/api/qoute/new',{
-        method: "POST",
+      const response = await fetch(`/api/qoute/${qouteId}`,{
+        method: "PATCH",
         body:JSON.stringify({
           qoute: post.qoute,
           image: post.image,
-          userId: session?.user.id,
           tag:post.tag
         })
       })
@@ -48,11 +63,11 @@ const createQoute = async (e) => {
 
   return (
     <Form
-     type= "Create"
+     type= "Edit"
      post = {post}
      setPost = {setPost}
      submitting = {submitting}
-     handleSubmit = {createQoute}
+     handleSubmit = {UpdateQoute}
      />
   )
 }

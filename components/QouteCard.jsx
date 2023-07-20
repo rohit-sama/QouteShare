@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
-import { disconnect } from "mongoose";
+
 
 const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
@@ -42,6 +42,7 @@ const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
                 ? "assets/icons/tick.svg"
                 : "assets/icons/copy.svg"
             }
+            alt= "anime_image"
             width={12}
             height={12}
           />
@@ -61,7 +62,7 @@ const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           handleTagClick && handleTagClick(post.tag);
         }}
       >
-        {post.tag}
+        #{post.tag}
       </p>
 
       {session?.user.id === post.Creator._id && pathName === "/profile" && (
