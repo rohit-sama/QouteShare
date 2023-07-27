@@ -43,10 +43,12 @@ This project uses next/font to automatically optimize and load Inter, a custom G
 - Create and share motivational quotes.
 - View shared quotes in the feed page.
 - Instantly copy quotes to the clipboard with a click of a button.
+- 
 ## Screenshots
-![image](https://github.com/rohit-sama/QouteShare/assets/112627630/047b0acb-c8b7-491a-b878-9a0681f68cb1)
-![image](https://github.com/rohit-sama/QouteShare/assets/112627630/9b115eec-411a-4c2f-bc32-fa328dd6a457)
-![image](https://github.com/rohit-sama/QouteShare/assets/112627630/d0ba0e08-1d93-4226-89e3-9a43f4ac5490)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/6d7b912e-d56c-49f3-aa45-ecc7d6127176)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/ed22ba9d-3eb2-4b94-8043-75acf381e346)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/8dda94fe-e116-4f2d-a786-9bcead7bd37f)
+
 
 
 ## Contributing
