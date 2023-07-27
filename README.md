@@ -1,34 +1,79 @@
+# QouteShare - Motivational Quotes Sharing Platform
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [About](#about)
+
 ## Getting Started
+- Stack: Next.js, Tailwind.css, MongoDB, NextAuth.js, Node.js
+- This project is designed for folks who are interested in sharing motivational quotes to inspire and support each other.
 
-First, run the development server:
+## Prerequisites
+Before running this project, ensure you have the following installed:
+- Node.js (version x.x.x): https://nodejs.org
+- MongoDB (version x.x.x): https://www.mongodb.com
+- npm (version x.x.x): This comes bundled with Node.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
+Navigate to the application in your browser to access the login page.
+Click on the "Login with Google" button to authenticate using your Google account.
+Once logged in, you can create and share motivational quotes.
+View shared quotes on the feed page.
+Click the copy button to instantly copy any quote to your clipboard.
+## Deployment
+To deploy this project to a production server or platform, follow the deployment steps recommended by Next.js or the hosting provider of your choice.
 
-## Learn More
+This project uses next/font to automatically optimize and load Inter, a custom Google Font.
 
-To learn more about Next.js, take a look at the following resources:
+ ## Features
+- Authentication features using NextAuth.js, allowing users to log in and log out using their Google accounts.
+- Create and share motivational quotes.
+- View shared quotes in the feed page.
+- Instantly copy quotes to the clipboard with a click of a button.
+## Screenshots
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/047b0acb-c8b7-491a-b878-9a0681f68cb1)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/9b115eec-411a-4c2f-bc32-fa328dd6a457)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/d0ba0e08-1d93-4226-89e3-9a43f4ac5490)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
+We welcome contributions to improve QouteShare. To contribute:
 
-## Deploy on Vercel
+- Fork this repository.
+- Create a new branch: git checkout -b feature/your-feature-name
+- Commit your changes: git commit -m "Add your feature"
+- Push to the branch: git push origin feature/your-feature-name
+- Open a pull request.
+Please ensure your code follows the project's coding conventions, and your pull request includes proper documentation and tests if applicable.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+This project is licensed under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Acknowledgments
+QouteShare is built on the shoulders of giants. We would like to acknowledge the contributors of the libraries and frameworks used in this project.
+
+Next.js
+Tailwind CSS
+MongoDB
+NextAuth.js
+Node.js
+
+## About
+Hi, I'm Rohit Singh, the creator of QouteShare. If you have any questions, suggestions, or feedback, feel free to reach out to me:
+
+Email: roht9804singh@gmail.com
+Twitter: @rohitstwts
+Thank you for using QouteShare! Together, let's spread motivation and positivity.
