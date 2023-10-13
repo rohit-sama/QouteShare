@@ -22,7 +22,7 @@ const Home = () => {
     const fetchPost = async () => {
       const response = await fetch("api/qoute");
       const data = await response.json();
-      setPosts(data);
+      setPosts((prev) => prev = data);
     };
     
     fetchPost();
