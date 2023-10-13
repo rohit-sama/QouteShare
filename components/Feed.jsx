@@ -29,7 +29,7 @@ const Feed = () => {
     };
     
     fetchPost();
-  }, []);
+  }, [posts]);
 
   return (
     <section className="feed">
