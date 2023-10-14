@@ -45,7 +45,7 @@ This project uses next/font to automatically optimize and load Inter, a custom G
 - Instantly copy quotes to the clipboard with a click of a button.
 - 
 ## Screenshots
-![image](https://github.com/rohit-sama/QouteShare/assets/112627630/6d7b912e-d56c-49f3-aa45-ecc7d6127176)
+![image](https://github.com/rohit-sama/QouteShare/assets/112627630/ee277256-1645-4633-b5b4-02411e36b8da)
 ![image](https://github.com/rohit-sama/QouteShare/assets/112627630/ed22ba9d-3eb2-4b94-8043-75acf381e346)
 ![image](https://github.com/rohit-sama/QouteShare/assets/112627630/8dda94fe-e116-4f2d-a786-9bcead7bd37f)
 
