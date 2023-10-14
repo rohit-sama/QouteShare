@@ -2,27 +2,30 @@
 import QouteCard from "@components/QouteCard";
 import { useEffect, useState } from "react";
 
-const QouteCardList = ({ data, handleTagClick }) => {
-  return (
-    <div className="mt-16 prompt_layout">
-      {data.map((post) => (
-        <QouteCard
-          key={post._id}
-          post={post}
-          handleTagClick={handleTagClick}
-        />
-      ))}
-    </div>
-  );
-};
-
 const Home = () => {
+  const QouteCardList = ({ data, handleTagClick }) => {
+    return (
+      <div className="mt-16 prompt_layout">
+        {data.map((post) => (
+          <QouteCard
+            key={post._id}
+            post={post}
+            handleTagClick={handleTagClick}
+          />
+        ))}
+      </div>
+    );
+  };
+
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchPost = async () => {
       const response = await fetch("api/qoute");
-      const data = await response.json();
-      setPosts((prev) => prev = data);
+      let data = await response.json();
+      if (!data) {
+        return;
+      }
+      setPosts(data);
     };
     
     fetchPost();

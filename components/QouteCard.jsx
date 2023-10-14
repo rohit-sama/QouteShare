@@ -2,13 +2,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
-
+import { usePathname } from "next/navigation";
 
 const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
   const pathName = usePathname();
-  const router = useRouter();
   const [copied, setCopied] = useState("");
   const handleCopy = () => {
     setCopied(post.qoute);
@@ -22,17 +20,26 @@ const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     <div className="prompt_card">
       <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
-          <Image
-            src={post.Creator?.image}
-            alt="user_image"
-            width={40}
-            height={40}
-            className="rouded-full object-contain"
-          />
+          { post.Creator?.image &&
+            <Image
+              src={post.Creator.image}
+              alt="user_image"
+              width={40}
+              height={40}
+              className="rouded-full object-contain"
+            />
+          }
           <div className="flex flex-col">
-            <h3 className="font-satoshi font-semibold text-gray-900">
-              {post.Creator?.username}
+            {
+              post.Creator?.username ? (
+<h3 className="font-satoshi font-semibold text-gray-900">
+              {post.Creator.username}
             </h3>
+              ) :(
+                <h3 className="font-satoshi font-semibold text-gray-900">unknown</h3>
+              )
+            }
+            
           </div>
         </div>
         <div className="copy_btn" onClick={handleCopy}>
@@ -42,15 +49,16 @@ const QouteCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
                 ? "assets/icons/tick.svg"
                 : "assets/icons/copy.svg"
             }
-            alt= "anime_image"
+            alt="anime_image"
             width={12}
             height={12}
           />
         </div>
       </div>
+      
       <img
         src={post.image}
-        alt="user_image"
+        alt="anime_image"
         width={400}
         height={400}
         className="rounded-md mt-3 mb-2 object-contain"
