@@ -8,9 +8,6 @@ const Home = () => {
     const fetchPost = async () => {
       const response = await fetch("api/qoute");
       let data = await response.json();
-      if (!data) {
-        return;
-      }
       setPosts(data);
     };
     fetchPost();
