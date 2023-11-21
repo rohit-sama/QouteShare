@@ -1,24 +1,8 @@
 "use client"
-
-
-import QouteCard from "@components/QouteCard";
 import { useEffect, useState } from "react";
+import QouteCardList from "@components/QouteCardList";
 
 const Home = () => {
-  const QouteCardList = ({ data, handleTagClick }) => {
-    return (
-      <div className="mt-16 prompt_layout">
-        {data.map((post) => (
-          <QouteCard
-            key={post._id}
-            post={post}
-            handleTagClick={handleTagClick}
-          />
-        ))}
-      </div>
-    );
-  };
-
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchPost = async () => {
@@ -29,9 +13,8 @@ const Home = () => {
       }
       setPosts(data);
     };
-    
     fetchPost();
-  }, [posts]);
+  }, []);
 
     return (
       <section className="w-full flex-center flex-col">
