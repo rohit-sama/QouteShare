@@ -1,4 +1,6 @@
 "use client"
+
+
 import QouteCard from "@components/QouteCard";
 import { useEffect, useState } from "react";
 
@@ -29,7 +31,7 @@ const Home = () => {
     };
     
     fetchPost();
-  }, []);
+  }, [posts]);
 
     return (
       <section className="w-full flex-center flex-col">
